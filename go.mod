@@ -3,7 +3,7 @@ module github.com/golangci/golangci-lint/v2
 // The minimum Go version must always be latest-1.
 // This version should never be changed outside of the PR to add the support of newer Go version.
 // Only golangci-lint maintainers are allowed to change it.
-go 1.25.0
+go 1.25.6
 
 ignore (
 	./docs
@@ -26,6 +26,7 @@ require (
 	github.com/Djarvur/go-err113 v0.1.1
 	github.com/MirrexOne/unqueryvet v1.5.4
 	github.com/OpenPeeDeeP/depguard/v2 v2.2.1
+	github.com/aidashovv/loglint v0.0.0-20260311110041-61a419abd064
 	github.com/alecthomas/chroma/v2 v2.23.1
 	github.com/alecthomas/go-check-sumtype v0.3.1
 	github.com/alexkohler/nakedret/v2 v2.0.6
@@ -224,7 +225,7 @@ require (
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
-	go.uber.org/zap v1.27.0 // indirect
+	go.uber.org/zap v1.27.1 // indirect
 	golang.org/x/exp/typeparams v0.0.0-20260209203927-2842357ff358 // indirect
 	golang.org/x/text v0.34.0 // indirect
 	golang.org/x/tools/go/packages/packagestest v0.1.1-deprecated // indirect

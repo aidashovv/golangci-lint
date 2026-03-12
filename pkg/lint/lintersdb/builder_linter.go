@@ -68,6 +68,7 @@ import (
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/ireturn"
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/lll"
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/loggercheck"
+	"github.com/golangci/golangci-lint/v2/pkg/golinters/loglint"
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/maintidx"
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/makezero"
 	"github.com/golangci/golangci-lint/v2/pkg/golinters/mirror"
@@ -143,6 +144,12 @@ func (LinterBuilder) Build(cfg *config.Config) ([]*linter.Config, error) {
 	// The linters are sorted in the alphabetical order (case-insensitive).
 	// When a new linter is added the version in `WithSince(...)` must be the next minor version of golangci-lint.
 	return []*linter.Config{
+
+		linter.NewConfig(loglint.New()).
+			WithSince("v1.0.1").
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/aidashovv/loglint"),
+
 		linter.NewConfig(arangolint.New()).
 			WithSince("v2.2.0").
 			WithLoadForGoAnalysis().
